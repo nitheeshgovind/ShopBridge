@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ShopBridge.WebApi;
 using ShopBridge.WebApi.Controllers;
 using System.Web.Mvc;
 
