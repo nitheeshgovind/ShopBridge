@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="Abstractions\IInventoryRepository.cs" />
     <Compile Include="Common\Exceptions\NotFoundException.cs" />
-    <Compile Include="Common\Exceptions\ValidationException.cs" />
     <Compile Include="Data\Inventory.cs" />
     <Compile Include="Data\ShopBridgeContext.cs" />
     <Compile Include="Extensions\DependencyInjectionExtensions.cs" />
@@ -72,9 +71,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\Mapper\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ShopBridge.Domin\ShopBridge.Domain.csproj">
       <Project>{264C15E5-08C4-4BD2-A8ED-58763CE4AF30}</Project>

@@ -2,15 +2,12 @@
 using Moq;
 using ShopBridge.Application.Abstractions;
 using ShopBridge.Application.Common.Exceptions;
-using ShopBridge.Application.Data;
 using ShopBridge.Domain.Models;
 using ShopBridge.WebApi.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Web.Http;
 using System.Web.Http.Results;
 
 namespace ShopBridge.WebApi.Tests.Controllers

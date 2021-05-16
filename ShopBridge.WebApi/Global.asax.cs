@@ -1,11 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using ShopBridge.Application;
-using ShopBridge.WebApi.Filters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Web;
+﻿using ShopBridge.WebApi.Filters;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -26,17 +19,8 @@ namespace ShopBridge.WebApi
             GlobalConfiguration.Configuration.Filters.Add(new ExceptionFilterAttribute());
             GlobalConfiguration.Configuration.Filters.Add(new ValiadationFilter());
 
-            IServiceCollection services = new ServiceCollection();
-
-            foreach (var item in Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name.EndsWith("Controller")))
-            {
-                services.AddTransient(item);
-            }
-
-            services.AddApplication();
-
-            GlobalConfiguration.Configuration.DependencyResolver = new DependencyResolver(services.BuildServiceProvider());
-
+            // Initialize dependency injection
+            DependencyConfig.Initialize(GlobalConfiguration.Configuration);
         }
     }
 }
